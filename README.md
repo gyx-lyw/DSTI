@@ -13,13 +13,22 @@ torch >= 1.0 torchvision opencv numpy scipy.
 1. Download Bus
 2. Preprocess Bus to generate ground-truth density maps
 ```shell 
-python generate_h5.py (dataset path) 
+python generate_h5.py
 ```
-3. Train Bus
+3. Divide the last 10% of the training set into the validation set. The folder structure should look like this:
+```shell 
+Bus
+├──train
+    ├──1.img
+    ├──1.h5
+├──val
+├──test
+```
+4. Train Bus
 ```shell 
 python train_fuse.py (dataset path) (directory for saving model weights)
 ```
-4. Test Bus
+5. Test Bus
 ```shell 
 python train_fuse.py (dataset path) (directory for saving model weights)
 ```
