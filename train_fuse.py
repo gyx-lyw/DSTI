@@ -40,7 +40,7 @@ def parse_args():
                         help='the num of training process')
     parser.add_argument('--is-gray', type=bool, default=False,
                         help='whether the input image is gray')
-    parser.add_argument('--frame-number', type=int, default=3,
+    parser.add_argument('--frame-number', type=int, default=4,
                         help='the number of input frames')
     args = parser.parse_args()
     return args
