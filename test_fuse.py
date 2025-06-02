@@ -20,7 +20,7 @@ def parse_args():
                         help='model directory')
     parser.add_argument('--roi-path', default='',
                         help='roi path')
-    parser.add_argument('--frame-number', type=int, default=3,
+    parser.add_argument('--frame-number', type=int, default=4,
                         help='the number of input frames')
     parser.add_argument('--device', default='0', help='assign device')
     parser.add_argument('--is-gray', type=bool, default=False,
