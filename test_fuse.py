@@ -13,7 +13,7 @@ args = None
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='Test ')
+    parser = argparse.ArgumentParser(description='Test')
     parser.add_argument('--data-dir', default='',
                         help='training data directory')
     parser.add_argument('--save-dir', default='',
@@ -36,7 +36,7 @@ if __name__ == '__main__':
     device = torch.device('cuda')
     model.to(device)
     model.eval()
-    model.load_state_dict(torch.load(os.path.join(args.save_dir, 'best_model_0.pth'), device))
+    model.load_state_dict(torch.load(os.path.join(args.save_dir, 'best_model.pth'), device))
 
     if 'fdst' in args.data_dir or 'ucsd' in args.data_dir or 'dronecrowd' in args.data_dir:
         sum_res = []
